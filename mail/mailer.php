@@ -10,7 +10,8 @@
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["message"]);
-
+        $address = trim($_POST["address"]);
+        $phone = trim($_POST["phone"]);
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
@@ -21,15 +22,24 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "shoaibbajwa9@gmail.com";
+        $recipient = "it@isolarnc.com";
 
         // Set the email subject.
         $subject = "New contact from $name";
 
         // Build the email content.
         $email_content = "Name: $name\n";
-        $email_content .= "Email: $email\n\n";
+        $email_content .= "Email: $email\n";
+        if (!empty($phone)) {
+          $email_content .= "Phone: $phone\n\n";
+        }
+        else {
+          $email_content .="\n";
+        }
         $email_content .= "Message:\n$message\n";
+        if (!empty($address)) {
+          $email_content .="Address:\n$address\n";
+        }
 
         // Build the email headers.
         $email_headers = "From: $name <$email>";
