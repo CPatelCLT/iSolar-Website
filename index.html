@@ -9,7 +9,7 @@
 	<!-- SLIDER REVOLUTION CSS -->
 	<link rel="stylesheet" type="text/css" href="css/extralayers.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen"/>
 
     <link rel="shortcut icon" href="images/favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -19,6 +19,16 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+    $(".fancybox").fancybox({
+            'titlePosition'     : 'inside',
+            'transitionIn'      : 'none',
+            'transitionOut'     : 'none'
+        });
+    });
+    </script>
 </head>
 <body>
 
@@ -64,6 +74,7 @@
             </div>
 			 <div class="navbar-serach pull-right">
 				<div id="top-bar-search">
+          <!-- TODO Fix search -->
 					<a class="" href="#"><i class="fa fa-search"></i></a>
 				</div>
 				<div style="display: none;" class="search-field">
@@ -101,7 +112,9 @@
 
   <!--===========================================END MAIN NAV==============================================-->
 
-
+  <div style="display:none"><div id="aboutcomp" style="width:400px;height:100px;overflow:auto;"><p>Measurement Controls, Inc. has been in the Natural Gas sector since late 60’s and works with gas utilities, pipeline operators, producers, industrial and commercial customers.  The recent environmental initiates and directives led us to evaluate Green House Gas Inventory for our customers and calculate Carbon credits and benefits for using our product. <br/>
+  With determination to increase number of Carbon credits, we came across the other side of the conventional energy sources: sustainable energy sources. Of all these, the solar technology is easily adaptable at several levels such as residential, industrial and commercial, or utility. <br/>
+  This is how iSolar, LLC. came into the Solar Power field (with a different kind of mission for carbon credits!)</p></div></div>
 
 		<!-- Fullscreen-Slider -->
 	<div class="fullscreen-container">
@@ -226,7 +239,7 @@
 							<div class="clearfix"></div>
 
 						</div>
-						<p class="margin-top-10">Measurement Controls, Inc. (<a href="http://www.measurementcontrols.com" style="text-transform:none !important;">www.measurementcontrols.com</a>) entered into a new energy sector: solar power. We bring quality of experience in dealing with energy and people. Our passion is to improve process, product, and people’s life.</p>
+						<p class="margin-top-10">Measurement Controls, Inc. (<a href="http://www.measurementcontrols.com" style="text-transform:none !important;">www.measurementcontrols.com</a>) entered into a new energy sector: solar power. We bring quality of experience in dealing with energy and people. Our passion is to improve process, product, and people’s life. Our mission is to help our customers reduce their carbon footprint.</p>
 					</div>
 				</div>
 
@@ -267,15 +280,20 @@
 							<div class="clearfix"></div>
 						</div>
 						<div>
+              <p>iSolar, LLC. is a project developer for solar PV systems with the continuous partnerships with professionals and experts such as engineers, accountants, and financial analysts.  By working seamlessly together, our team completes projects successfully on time. <br/> We came into the solar power field with a mission to help our customers reduce their carbon footprints.</p>
+
+
+              <!-- TODO Move to "read more"
 							<p>Measurement Controls, Inc. has been in the Natural Gas sector since late 60’s and works with gas utilities, pipeline operators, producers, industrial and commercial customers.  The recent environmental initiates and directives led us to evaluate Green House Gas Inventory for our customers and calculate Carbon credits and benefits for using our product. <br/>
  With determination to increase number of Carbon credits, we came across the other side of the conventional energy sources: sustainable energy sources. Of all these, the solar technology is easily adaptable at several levels such as residential, industrial and commercial, or utility. <br/>
-This is how iSolar, LLC. came into the Solar Power field (with a different kind of mission for carbon credits!)</p>
+This is how iSolar, LLC. came into the Solar Power field (with a different kind of mission for carbon credits!)</p> -->
 
 						</div>
 
 						<div class="col-md-3 col-sm-3 col-xs-12 padding-right-0  margin-top-40 read-more">
 
-								<a href="" class="">read more</a>
+								<a id="inlinefancy" href="#aboutcomp" class="fancybox">read more</a>
+
 
 						</div>
 					</div>
@@ -420,9 +438,9 @@ This is how iSolar, LLC. came into the Solar Power field (with a different kind 
 											</figure>
 						</div>
 						<div class="clearfix"></div>
-						<h4>Utility Scale
+						<h4>Carbon Footprint
 </h4>
-						<p>Utility-scale solar has been in place before even residential/commercial started. They sell directly to utility or very large wholesale user. As the equipment last longer and requires a little maintenance, It provides the benefit of fixed-priced electricity during peak demand periods when electricity from fossil fuels is the most expensive.</p>
+						<p>We offer a full service energy finance advisory service. We are committed to enhance our customers’ financial and environmental goals that can be reducing Carbon Footprint and combat Climate Change. Our project analysis reports are simple and easy to understand the financial, legal, utility rate plans, and meteorological data. </p>
 						<div class="more float-left">
 							<a href="">more</a>
 						</div>
@@ -637,21 +655,22 @@ extricat, amaras. Prima luce, cum quibus mons aliud consensu.</p>
 
 				</div>
 			</div>
-			<div class="row padding-bottom-80 padding-top-30">
+			<!--<div class="row padding-bottom-80 padding-top-30">
 				<div class="container more-projects text-center">
 					<h1>WE HAVE DONE MORE</h1>
 					<h5>View our all Projects </h5>
 					<a href="">View all</a>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<div class="padding-top-84 padding-bottom-84 color-white" id="videobox3">
 
 				<div class="container">
 						<div class="col-md-6 col-sm-6 col-xs-12 video3">
 							<div class="text-center video-box-content">
 								<span class="video-play-btnn">
-									<a href="https://player.vimeo.com/video/102732914?title=0&amp;byline=0&amp;portrait=0&amp;color=11b1c2&amp;wmode=opaque" class="html5lightbox content-vbtn-color-blue" data-width="900" data-height="420" title="title here "><i class="fa fa-play-circle"></i></a>
+                  <!--TODO Fix embedded video-->
+									<a href="https://www.youtube.com/watch?v=_BXf_h8tEes" class="html5lightbox content-vbtn-color-blue" data-width="900" data-height="420" title="title here "><i class="fa fa-play-circle"></i></a>
 
 								</span>
 
@@ -909,7 +928,7 @@ nisi dignissim</h5>
 												<div class="clearfix"></div>
 											</div>
 
-											<p>Voluptatem quia voluptas sit as empty pernatur aut odit aut fugit Neque porro sed quia set it consequuntur sed diam et in nonummy in onm nibh.Voluptatem quia voluptas sit as emm nt pernatur aut odit aut</p>
+											<p>iSolar, LLC. is a project developer for solar PV systems with the continuous partnerships with professionals and experts such as engineers, accountants, and financial analysts.  </p>
 											<div class="ft-logo">
 												<img src="images/isolar-logo.png" style="height:37px;" alt="img"/>
 											</div>
