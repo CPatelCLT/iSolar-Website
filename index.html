@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
     <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
+    <script src="js/jquery.js"></script>
 
     <link rel="shortcut icon" href="images/favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -25,9 +26,11 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            $(".fancybox").fancybox({
+            $("#aboutbtn").fancybox({
                 'titlePosition': 'inside',
                 'transitionIn': 'none',
+                'onStart': function() { $("#aboutfancy").css("display","block"); },
+                'onClosed': function() { $("#aboutfancy").css("display","none"); }
                 'transitionOut': 'none'
             });
         });
@@ -267,13 +270,16 @@ This is how iSolar, LLC. came into the Solar Power field (with a different kind 
 
                 </div>
 
-                <div class="col-md-3 col-sm-3 col-xs-12 padding-right-0  margin-top-40 read-more">
+                <!-- <div class="col-md-3 col-sm-3 col-xs-12 padding-right-0  margin-top-40 read-more">
 
-                    <!--<a id="inlinefancy" href="#aboutcomp" class="fancybox">read more</a>
-								<a href="#1" data-featherlight="#abus">read more</a>-->
-
-
-                </div>
+                    <a id="aboutbtn" href="#aboutfancy">read more</a>
+                <div id="aboutfancy" style="display:none">
+                Measurement Controls, Inc. has been in the Natural Gas sector since late 60’s and works with gas utilities, pipeline operators, producers, industrial and commercial customers. The recent environmental initiates and directives
+                    led us to evaluate Green House Gas Inventory for our customers and calculate Carbon credits and benefits for using our product. <br/> With determination to increase number of Carbon credits, we came across the other side
+                    of the conventional energy sources: sustainable energy sources. Of all these, the solar technology is easily adaptable at several levels such as residential, industrial and commercial, or utility. <br/> This is how iSolar,
+                    LLC. came into the Solar Power field (with a different kind of mission for carbon credits!)
+                  </div>
+                </div> -->
             </div>
 
             <div class="about-slider col-md-6 col-sm-6 col-xs-12 padding-right-0">
@@ -360,12 +366,12 @@ This is how iSolar, LLC. came into the Solar Power field (with a different kind 
                     <h4>Residential Solar</h4>
                     <p>Solar power saves you money. Equipment is becoming more efficient, new software is being developed to monitor performance and efficiency. With financial incentives and rebates put together, the overall cost of ownership can be much
                         lower and the benefits keep coming for ~25 years with higher property value!</p>
-                    <div class="more float-left">
+                    <!-- <div class="more float-left">
                         <a href="">more</a>
                     </div>
                     <div class="estimate float-left">
                         <a href="#5">Get Estimation</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12 wedo">
                     <div class="gri">
@@ -382,12 +388,12 @@ This is how iSolar, LLC. came into the Solar Power field (with a different kind 
 </h4>
                     <p>Businesses are no exception to energy saving. It will reduce the energy cost that keeps rising over the time. Solar power brings stability to the energy cost in operating a business. Due to several financial incentives for businesses,
                         the Return on Investment can be very attractive compared to any other form of investment.</p>
-                    <div class="more float-left">
+                    <!-- <div class="more float-left">
                         <a href="">more</a>
                     </div>
                     <div class="estimate float-left">
                         <a href="#5">Get Estimation</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12 wedo">
                     <div class="gri">
@@ -404,12 +410,12 @@ This is how iSolar, LLC. came into the Solar Power field (with a different kind 
 </h4>
                     <p>What else can show their environmental leadership in their local service area than Solar Power? Renewable energy is the best tool to showcase a Special Entities and Non-Profit Organizations commitment to their core goals. In addition
                         to financial benefits, SEs can also monitor their contribution to reducing carbon emission.</p>
-                    <div class="more float-left">
+                    <!-- <div class="more float-left">
                         <a href="">more</a>
                     </div>
                     <div class="estimate float-left">
                         <a href="#5">Get Estimation</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12 wedo">
                     <div class="gri">
@@ -426,12 +432,12 @@ This is how iSolar, LLC. came into the Solar Power field (with a different kind 
 </h4>
                     <p>We offer a full service energy finance advisory service. We are committed to enhance our customers’ financial and environmental goals that can be reducing Carbon Footprint and combat Climate Change. Our project analysis reports are
                         simple and easy to understand the financial, legal, utility rate plans, and meteorological data. </p>
-                    <div class="more float-left">
+                    <!-- <div class="more float-left">
                         <a href="">more</a>
                     </div>
                     <div class="estimate float-left">
                         <a href="#5">Get Estimation</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -985,17 +991,8 @@ nisi dignissim</h5>
         </div>
 
     </div>
-    <div style="display:none">
-        <div id="abus" class="lightbox">
-            <p>Measurement Controls, Inc. has been in the Natural Gas sector since late 60’s and works with gas utilities, pipeline operators, producers, industrial and commercial customers. The recent environmental initiates and directives led us to evaluate
-                Green House Gas Inventory for our customers and calculate Carbon credits and benefits for using our product. <br/> With determination to increase number of Carbon credits, we came across the other side of the conventional energy sources:
-                sustainable energy sources. Of all these, the solar technology is easily adaptable at several levels such as residential, industrial and commercial, or utility. <br/> This is how <em>i</em>Solar, LLC. came into the Solar Power field (with
-                a different kind of mission for carbon credits!)</p>
-        </div>
-    </div>
     <!-- Load JS here for greater good =============================-->
 
-    <script src="js/jquery.js"></script>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
